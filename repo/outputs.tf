@@ -2,7 +2,7 @@ output "full_name" {
   value = github_repository.repo.full_name
 }
 
-output "htm_url" {
+output "html_url" {
   value = github_repository.repo.html_url
 }
 

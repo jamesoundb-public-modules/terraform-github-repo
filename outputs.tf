@@ -2,8 +2,8 @@ output "full_name" {
   value = module.github_repo.full_name
 }
 
-output "htm_url" {
-  value = module.github_repo.htm_url
+output "html_url" {
+  value = module.github_repo.html_url
 }
 
 output "ssh_clone_url" {

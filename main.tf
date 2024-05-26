@@ -1,12 +1,17 @@
-module "github_repo" {
-  source             = "./repo"
-  name               = "Name of your repo"
-  description        = "Description of your repo"
-  visibility         = "private or public"
-  has_issues         = true
-  has_wiki           = true
-  auto_init          = true
-  license_template   = "License template"
-  gitignore_template = "gitignore template"
-  branch             = "default branch name"
+resource "github_repository" "repo" {
+  name               = var.name
+  description        = var.description
+  visibility         = var.visibility
+  has_issues         = var.has_issues
+  has_wiki           = var.has_wiki
+  auto_init          = var.auto_init
+  license_template   = var.license_template
+  gitignore_template = var.gitignore_template
 }
+
+resource "github_branch_default" "main" {
+  repository = github_repository.repo.id
+  branch     = var.branch
+}
+
+

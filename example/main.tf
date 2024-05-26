@@ -1,5 +1,5 @@
 module "github_repo" {
-  source             = "./repo"
+  source             = "github.com/jamesoundb/terraform-github-repo"
   name               = "Name of your repo"
   description        = "Description of your repo"
   visibility         = "private or public"

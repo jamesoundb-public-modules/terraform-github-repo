@@ -3,7 +3,7 @@ terraform {
     github = {
       source  = "integrations/github"
       version = "5.16.0"
-      # Set GITHUB_TOKEN environment variable or include token reference
+      # Set TF_VAR_github_token environment variable or include token reference
     }
     tfe = {
       source  = "hashicorp/tfe"
